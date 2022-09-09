@@ -1,13 +1,13 @@
 pipeline {
     agent any
     environment {
-        AWS_ACCESS_KEY_ID = credentials('jenkins-access-key-id')
-        AWS_SECRET_ACCESS_KEY = credentials('jenkins-secret-access-key')
-        AWS_S3_BUCKET = "gradffffffffffff"
+        AWS_ACCESS_KEY_ID = credentials('jenkins-aws-secret-key-id')
+        AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
+        AWS_S3_BUCKET = "sample-http"
         ARTIFACT_NAME = "sample-gradle.jar"
-        AWS_EB_APP_NAME = "grad"
+        AWS_EB_APP_NAME = "goldenWaste"
         AWS_EB_APP_VERSION = "${BUILD_ID}"
-        AWS_EB_ENVIRONMENT = "Grad-env"
+        AWS_EB_ENVIRONMENT = "Goldenwaste-env"
     }
     stages {
         stage('Validate') {
